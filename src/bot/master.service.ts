@@ -1,11 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { CreateMasterDto } from "./dto/create-master.dto";
-import { UpdateMasterDto } from "./dto/update-master.dto";
 import { InjectModel } from "@nestjs/sequelize";
 import { Master } from "./models/master.model";
 import { Context, Markup } from "telegraf";
 import { User } from "./models/user.model";
-import { callback } from "telegraf/typings/button";
 import { BronTime } from "./models/bron_time.model";
 import { Service } from "./models/services.model";
 
