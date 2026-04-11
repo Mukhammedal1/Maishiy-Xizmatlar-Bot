@@ -2,11 +2,11 @@ import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 import { BadRequestException, ValidationPipe } from "@nestjs/common";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
-import * as cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser";
 
 async function start() {
   try {
-    const PORT = process.env.PORT ?? 3003;
+    const PORT = process.env.PORT ?? 3004;
     const app = await NestFactory.create(AppModule);
     app.use(cookieParser());
     app.useGlobalPipes(new ValidationPipe());
